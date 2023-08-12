@@ -65,3 +65,67 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* Add this style to your existing CSS */
+.login-link {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.login-link:hover {
+  color: #ebe7e5; 
+}
+
+/* Styles for the navigation menu */
+.navigation {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.navigation li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.navigation li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navigation li a:hover {
+  color: #ffd700;
+}
+
+/* Styles for the dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 150px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #444;
+}
