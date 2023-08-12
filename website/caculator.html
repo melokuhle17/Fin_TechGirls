@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remittance Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+  <video autoplay muted loop id="video-background">
+    <source src="melo1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="calculator">
+    <h1>Mukuru</h1>
+    <div class="inputs">
+        <label for="sendCountry">Sending Country:</label>
+        <select id="sendCountry"></select>
+        <!-- <label for="sendCurrency">Sending Currency:</label>
+        <select id="sendCurrency"></select> -->
+        <label for="receiveCountry">Receiving Country:</label>
+        <select id="receiveCountry"></select>
+        <!-- <label for="receiveCurrency">Receiving Currency:</label>
+        <select id="receiveCurrency"></select> -->
+        <label for="productType">Transaction Description:</label>
+        <select id="productType"></select>
+        
+        <label for="productTypess">Product Type:</label>
+        <select id="productTypess">
+          <option value="bank-top-up" selected>Bank Top-Up</option>
+        </select>
+        
+       <!-- Add this block below the 'Product Type' dropdown -->
+<!-- Add this block below the 'Product Type' dropdown -->
+<div id="exchangeRateFeeContainer">
+    <p><span id="exchangeRate"></span></p>
+    <p> <span id="fee"></span></p>
+  </div>
+  
+  
+        <p id="exchangeRateFee"></p>
+        
+        <label for="sendAmount">Sending Amount:</label>
+        <input type="number" id="sendAmount" value="100">
+        <button id="calculate">Calculate</button>
+    </div>
+    <div id="result" class="result"></div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
