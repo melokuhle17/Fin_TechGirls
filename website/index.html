@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Background Page</title>
+  <style>
+    body, h1, h2, p {
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Video background styles */
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    #bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Center content */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay */
+    }
+
+    /* Content styles */
+    .content {
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    /* Button style */
+    .go-to-calculate-button {
+      background-color: #d36e10; /* Changed to an orange color */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    /* Add this style to your existing CSS */
+.transparent-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white; /* Add a border for visibility */
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.transparent-button:hover {
+  background-color: white;
+  color: #030507;
+  border-color: transparent;
+}
+
+
+    /* Updated button hover effect */
+    .go-to-calculate-button:hover {
+      background-color: #e57e21; /* Lighter shade on hover */
+    }
+    .logo {
+      max-width: 100px; /* Adjust the width as needed */
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px; /* Add spacing between logo and text */
+    }
+  </style>
+</head>
+<body>
+  <div class="video-background">
+    <video autoplay muted loop id="bg-video">
+      <source src="melo1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="container">
+    <div class="content">
+      <!-- Add the logo image -->
+      <img src="logo2.jpeg" alt="Mokuru Logo" class="logo">
+      <h1>Welcome to Mokuru</h1>
+      <p>This is an example of a webpage with a video background.</p>
+      <button class="go-to-calculate-button transparent-button" onclick="scrollToCalculator()">Go to Calculate</button>
+    </div>
+
+  <!-- Rest of your code -->
+
+  <script>
+    function scrollToCalculator() {
+      const calculatorSection = document.querySelector('.calculator');
+      if (calculatorSection) {
+        calculatorSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
